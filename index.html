@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRESS TEST - FEA Physics</title>
+<link rel="stylesheet" href="styles/landing.css">
+</head>
+<body>
+    <div class="landing-page">
+        <div class="title-container">
+            <h1 class="main-title">STRESS TEST</h1>
+            <p class="subtitle">finite element physics games</p>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card" data-mode="crane">
+                <h2>DEMOLITION</h2>
+                <p>wrecking ball physics</p>
+            </div>
+            <div class="feature-card" data-mode="turbine">
+                <h2>TURBINE</h2>
+                <p>centrifugal shattering</p>
+            </div>
+            <div class="feature-card" data-mode="optimizer">
+                <h2>SIEGE</h2>
+                <p>catapult destruction</p>
+            </div>
+            <div class="feature-card" data-mode="collapse">
+                <h2>BRIDGE</h2>
+                <p>load testing</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const mode = card.getAttribute('data-mode');
+                window.location.href = 'simulator.html?mode=' + mode;
+            });
+        });
+    </script>
+</body>
+</html>

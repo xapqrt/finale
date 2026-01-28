@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stress test</title>
+    <link rel="stylesheet" href="styles/simulator.css">
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html'">← BACK</button>
+    
+    <canvas id="main-canvas" width="1920" height="1080"></canvas>
+    <div class="overlay"></div>
+    
+    <div class="mode-indicator" id="modeIndicator">MODE</div>
+    
+    <div class="info-panel" id="modeInfo">
+        Mode information
+    </div>
+
+    <div id="instructionModal" class="instruction-modal">
+        <div class="instruction-content">
+            <button class="close-instruction" onclick="closeInstruction()">✕</button>
+            <h2 id="instructionTitle">FEATURE NAME</h2>
+            <div id="instructionText">
+                <p>Instructions will appear here</p>
+            </div>
+            <button class="got-it-btn" onclick="closeInstruction()">GOT IT</button>
+        </div>
+    </div>
+    
+    <div class="controls-panel">
+        <button id="clearBtn">RESET</button>
+        
+        <div id="craneControls" class="mode-controls" style="display: none;">
+            <div class="slider-control">
+                <label id="massLabel">BALL MASS: 500 kg</label>
+                <input type="range" id="massSlider" min="200" max="1000" step="50" value="500">
+            </div>
+            <div class="slider-control">
+                <label id="cableLabel">CABLE LENGTH: 250</label>
+                <input type="range" id="cableSlider" min="150" max="400" step="10" value="250">
+            </div>
+        </div>
+        
+        <div id="turbineControls" class="mode-controls" style="display: none;">
+            <button id="spinBtn">SPIN UP</button>
+            <button id="stopBtn">STOP</button>
+            <div class="slider-control">
+                <label id="rpmLabel">MAX RPM: 300</label>
+                <input type="range" id="rpmSlider" min="100" max="800" step="50" value="300">
+            </div>
+            <div class="slider-control">
+                <label id="forceLabel">CENTRIFUGAL: 1.0x</label>
+                <input type="range" id="forceSlider" min="1" max="50" step="1" value="10">
+            </div>
+            <div class="slider-control">
+                <label id="bladeLabel">BLADE THICK: 1.0x</label>
+                <input type="range" id="bladeSlider" min="1" max="30" step="1" value="10">
+            </div>
+        </div>
+        
+        <div id="optimizerControls" class="mode-controls" style="display: none;">
+            <button id="fireBtn" style="background:#ff6600;">FIRE!</button>
+            <button id="clearBtn" style="background:#666;">RESET</button>
+            <div class="slider-control">
+                <label id="powerLabel">POWER: 1.0x</label>
+                <input type="range" id="powerSlider" min="5" max="20" step="1" value="10">
+            </div>
+            <div class="slider-control">
+                <label id="massLabel">BOULDER MASS: 50 kg</label>
+                <input type="range" id="massSlider" min="20" max="150" step="10" value="50">
+            </div>
+        </div>
+        
+        <div id="collapseControls" class="mode-controls" style="display: none;">
+            <button id="startBtn" style="background:#00aa00;">TEST BRIDGE</button>
+            <div class="slider-control">
+                <label id="segmentLabel">SEGMENTS: 12</label>
+                <input type="range" id="segmentSlider" min="6" max="20" step="1" value="12">
+            </div>
+            <div class="slider-control">
+                <label id="vehicleLabel">VEHICLE MASS: 800 kg</label>
+                <input type="range" id="vehicleSlider" min="400" max="2000" step="100" value="800">
+            </div>
+            <div class="slider-control">
+                <label id="speedLabel">SPEED: 2x</label>
+                <input type="range" id="speedSlider" min="1" max="5" step="1" value="2">
+            </div>
+        </div>
+    </div>
+
+    <script src="features/simulator.js" type="module"></script>
+</body>
+</html>

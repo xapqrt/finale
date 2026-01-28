@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Collapse Protocol - STRESS_TEST</title>
+<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<button class="back-button" onclick="window.location.href='../index.html'">← MENU</button>
+
+<div id="heatmap-legend">
+    <div class="legend-title">STRESS HEATMAP</div>
+    <div class="legend-gradient"></div>
+    <div class="legend-labels">
+        <span>0% (Safe)</span>
+        <span>100% (Collapse)</span>
+    </div>
+</div>
+
+<div id="feature-container">
+    <div id="feature-title">COLLAPSE PROTOCOL</div>
+    <div id="feature-subtitle">Seismic Survival • Earthquake Simulation • 20-Second Challenge</div>
+    
+    <canvas id="main-canvas" width="1000" height="700"></canvas>
+    
+    <div id="stats">
+        <div class="stat-item">
+            <div class="stat-label">TIMER</div>
+            <div class="stat-value" id="timer-display" style="font-size:32px; color:#ff4444;">20.0s</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">MAGNITUDE</div>
+            <div class="stat-value" id="magnitude-display">0.0</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">COLLAPSED FLOORS</div>
+            <div class="stat-value" id="collapsed-display">0/10</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">LEAN ANGLE</div>
+            <div class="stat-value" id="lean-display">0.0°</div>
+        </div>
+    </div>
+    
+    <div id="controls">
+        <button id="reset-btn">NEW BUILDING</button>
+        <button id="audio-btn">ENABLE AUDIO</button>
+        <button id="start-btn" style="background:#ff4444; font-size:16px; padding:15px 30px;">START EARTHQUAKE</button>
+    </div>
+    
+    <div id="result-overlay" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(0,0,0,0.9); padding:40px; border:3px solid #00ff00; z-index:1000;">
+        <div id="result-text" style="font-size:48px; color:#00ff00; font-weight:bold; text-align:center; margin-bottom:20px;">SURVIVED!</div>
+        <div style="font-size:20px; color:#fff; text-align:center; margin-bottom:30px;">Building integrity maintained for 20 seconds</div>
+        <button onclick="document.getElementById('result-overlay').style.display='none'; document.getElementById('reset-btn').click();" style="font-size:18px; padding:15px 40px; background:#00ff00; color:#000;">TRY AGAIN</button>
+    </div>
+    
+    <div style="text-align:center; color:#ffaa00; margin-top:20px; font-size:14px;">
+        Survive 20 seconds of seismic loading • Building sways and collapses floor-by-floor • Progressive failure = GAME OVER
+    </div>
+</div>
+
+<script src="collapse.js" type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0f 100%);
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: #00e5ff;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #888;
+    letter-spacing: 4px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    padding: 50px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    background: rgba(0, 229, 255, 0.1);
+    border-color: rgba(0, 229, 255, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.3);
+}
+
+.feature-card h2 {
+    font-size: 24px;
+    color: #00e5ff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .main-title {
+        font-size: 48px;
+    }
+}

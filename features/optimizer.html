@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Organic Optimizer - STRESS_TEST</title>
+<link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<button class="back-button" onclick="window.location.href='../index.html'">← MENU</button>
+
+<div id="heatmap-legend">
+    <div class="legend-title">STRESS HEATMAP</div>
+    <div class="legend-gradient"></div>
+    <div class="legend-labels">
+        <span>0% (Unused)</span>
+        <span>100% (Critical)</span>
+    </div>
+</div>
+
+<div id="feature-container">
+    <div id="feature-title">ORGANIC OPTIMIZER</div>
+    <div id="feature-subtitle">Generative Design • Stress-Directed Pruning • Evolutionary Growth</div>
+    
+    <canvas id="main-canvas" width="1000" height="700"></canvas>
+    
+    <div id="stats">
+        <div class="stat-item">
+            <div class="stat-label">GENERATION</div>
+            <div class="stat-value" id="generation-display">0</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">EFFICIENCY</div>
+            <div class="stat-value" id="efficiency-display">0%</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">ELEMENTS</div>
+            <div class="stat-value" id="elements-display">0</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">MASS SAVED</div>
+            <div class="stat-value" id="mass-display">0%</div>
+        </div>
+    </div>
+    
+    <div id="controls">
+        <button id="reset-btn">RESET STRUCTURE</button>
+        <button id="audio-btn">ENABLE AUDIO</button>
+        <button id="evolve-btn">AUTO EVOLVE</button>
+        <button id="step-btn">SINGLE STEP</button>
+    </div>
+    
+    <div style="text-align:center; color:#ffaa00; margin-top:20px; font-size:14px;">
+        Low-stress elements are pruned • High-stress paths are reinforced • Structure evolves toward bone-like efficiency
+    </div>
+</div>
+
+<script src="optimizer.js" type="module"></script>
+
+</body>
+</html>
